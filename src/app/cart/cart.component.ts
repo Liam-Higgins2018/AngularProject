@@ -15,10 +15,11 @@ export class CartComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-		private productService: ProductService
+	private productService: ProductService
   ) { }
 
   ngOnInit() {
+		//Gets select product id from menu 
 		this.activatedRoute.params.subscribe(params => {
 			var id = params['id'];
 			if (id) {
@@ -51,8 +52,7 @@ export class CartComponent implements OnInit {
 					}
 				}
 				this.loadCart();
-			} else {
-			}
+			} 
 		});
 	}
 

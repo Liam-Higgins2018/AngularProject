@@ -12,13 +12,13 @@
       <mat-error *ngIf="title.invalid">Please enter a post title.</mat-error>
     </mat-form-field>
     <mat-form-field>
-      <textarea
+      <input
         matInput
-        rows="4"
+        type = "text"
         name="content"
         ngModel
         required
-        #content="ngModel"></textarea>
+        #content="ngModel">
       <mat-error *ngIf="content.invalid">Please enter a post title.</mat-error>
     </mat-form-field>
     <button
